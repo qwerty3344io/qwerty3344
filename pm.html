@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รายการเสนอการออกแบบกราฟิก</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        input, textarea, select {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        input[type="file"] {
+            padding: 0;
+        }
+
+        .submit-btn {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>รายการเสนอการออกแบบกราฟิก</h1>
+        <form action="#" method="post" enctype="multipart/form-data">
+            
+            <!-- รูปแบบงาน -->
+            <label for="work-type">1. รูปแบบงาน:</label>
+            <select id="work-type" name="work-type" required>
+                <option value="">กรุณาเลือก</option>
+                <option value="logo">โลโก้</option>
+                <option value="banner">แบนเนอร์</option>
+                <option value="social-media">โซเชียลมีเดีย</option>
+                <option value="flyer">ใบปลิว</option>
+                <option value="business-card">นามบัตร</option>
+                <option value="others">อื่นๆ</option>
+            </select>
+            
+            <!-- สีที่ต้องการใช้ -->
+            <label for="colors">2. สีที่ต้องการใช้:</label>
+            <input type="text" id="colors" name="colors" placeholder="ระบุสีที่ต้องการ" required>
+            
+            <!-- ตัวอย่างงาน -->
+            <label for="sample-work">3. ตัวอย่างงาน (สามารถแนบรูปภาพได้):</label>
+            <input type="file" id="sample-work" name="sample-work" accept="image/*">
+            
+            <!-- ระยะเวลาการทำงาน -->
+            <label for="deadline">4. ระยะเวลาการทำงาน:</label>
+            <input type="date" id="deadline" name="deadline" required>
+
+                        <!-- ข้อมูลรายละเอียดของงาน -->
+                        <label for="details">4. ข้อมูลรายละเอียดของงาน:</label>
+                        <textarea id="details" name="details" rows="4" cols="50" required></textarea>
+            
+            <!-- ปุ่มส่งข้อมูล -->
+            <button type="submit" class="submit-btn">ส่งข้อมูล</button>
+        </form>
+    </div>
+
+    <div class="footer">
+        <p>© 2024 การออกแบบกราฟิกของคุณ - ทุกสิทธิ์สงวนไว้</p>
+    </div>
+
+</body>
+</html>
